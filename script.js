@@ -1,28 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let currentAudio = null;
+let currentAudio = null;
 
-    document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', () => {
-            // Stop the currently playing audio
-            if (currentAudio) {
-                currentAudio.pause();
-                currentAudio.currentTime = 0; // Reset to start
-            }
+function playSound(sound) {
+    if (currentAudio) {
+        currentAudio.pause(); // Stop the currently playing sound
+    }
+    currentAudio = new Audio(sound);
+    currentAudio.play();
+}
 
-            // Get the sound file from the button's data attribute
-            const soundFile = button.getAttribute('data-sound');
-            currentAudio = new Audio(`sounds/${soundFile}`);
-            currentAudio.play().catch(error => {
-                console.error('Error playing sound:', error);
-            });
-        });
-    });
-
-    document.querySelector('.stop').addEventListener('click', () => {
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0; // Reset to start
-            currentAudio = null; // Reset currentAudio
-        }
-    });
-});
+function stopSound() {
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0; // Reset to the start
+    }
+}

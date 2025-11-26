@@ -3,37 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <title>Soundbar</title>
-    <style>
-        #buttons {
-            background-color: #6c5ce7;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .btn,
-        .stop {
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #534b90;
-            color: white;
-        }
-    </style>
 </head>
 <body>
     <div id="buttons">
-        <button class="btn" data-sound="applause.mp3">Applause</button>
-        <button class="btn" data-sound="boo.mp3">Boo</button>
-        <button class="btn" data-sound="gasp.mp3">Gasp</button>
-        <button class="btn" data-sound="tada.mp3">Tada</button>
-        <button class="btn" data-sound="victory.mp3">Victory</button>
-        <button class="btn" data-sound="wrong.mp3">Wrong</button>
-        <button class="stop">Stop</button>
+        <button class="btn" onclick="playSound('sounds/sound1.mp3')">Sound 1</button>
+        <button class="btn" onclick="playSound('sounds/sound2.mp3')">Sound 2</button>
+        <button class="btn" onclick="playSound('sounds/sound3.mp3')">Sound 3</button>
+        <button class="stop" onclick="stopSound()">Stop</button>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

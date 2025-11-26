@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn, .stop {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+}
+
+.stop {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+}
