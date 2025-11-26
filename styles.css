@@ -1,27 +1,29 @@
 body {
-    background: #6a1b9a;
-    font-family: Arial;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #a56be8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #buttons {
-    text-align: center;
+  display: flex;
+  gap: 25px;
 }
 
 .btn, .stop {
-    background: #4527a0;
-    color: white;
-    padding: 12px 20px;
-    margin: 8px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 15px 25px;
+  border: none;
+  background: #5a2ea6;
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
-.stop {
-    background: red;
+.btn:hover, .stop:hover {
+  opacity: 0.8;
 }
