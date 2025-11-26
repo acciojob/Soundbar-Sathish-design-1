@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soundbar</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
     <div id="buttons">
-        <button class="btn" onclick="playSound('sounds/sound1.mp3')">Sound 1</button>
-        <button class="btn" onclick="playSound('sounds/sound2.mp3')">Sound 2</button>
-        <button class="btn" onclick="playSound('sounds/sound3.mp3')">Sound 3</button>
-        <button class="stop" onclick="stopSound()">Stop</button>
+        <button class="btn" onclick="playSound('sounds/applause.mp3')">applause</button>
+        <button class="btn" onclick="playSound('sounds/boo.mp3')">boo</button>
+        <button class="btn" onclick="playSound('sounds/gasp.mp3')">gasp</button>
+        <button class="btn" onclick="playSound('sounds/tada.mp3')">tada</button>
+        <button class="btn" onclick="playSound('sounds/victory.mp3')">victory</button>
+        <button class="btn" onclick="playSound('sounds/wrong.mp3')">wrong</button>
+
+        <button class="stop" onclick="stopSound()">stop</button>
     </div>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+
+    <script src="script.js"></script>
 </body>
 </html>

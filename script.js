@@ -1,16 +1,18 @@
 let currentAudio = null;
 
-function playSound(sound) {
+function playSound(soundPath) {
     if (currentAudio) {
-        currentAudio.pause(); // Stop the currently playing sound
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
     }
-    currentAudio = new Audio(sound);
+
+    currentAudio = new Audio(soundPath);
     currentAudio.play();
 }
 
 function stopSound() {
     if (currentAudio) {
         currentAudio.pause();
-        currentAudio.currentTime = 0; // Reset to the start
+        currentAudio.currentTime = 0;
     }
 }
